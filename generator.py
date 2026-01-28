@@ -9,14 +9,13 @@ TEMPLATE_PG = """<article class="bg-white p-6 rounded-xl shadow-sm border border
 TEMPLATE_ESSAY = """<article class="bg-white p-6 rounded-xl shadow-sm border border-orange-100 mb-6"><div class="flex gap-3"><span class="bg-orange-100 text-orange-700 font-bold px-3 py-1 rounded h-fit text-sm">Esai {NO}.</span><div class="w-full"><p class="text-lg font-medium mb-4">{PERTANYAAN}</p><textarea class="w-full border p-3 rounded-lg text-sm mb-3 focus:outline-blue-500" rows="3" placeholder="Tulis jawabanmu disini..."></textarea><details class="group"><summary class="flex cursor-pointer items-center gap-2 text-orange-600 font-semibold text-sm select-none"><i class="fa-solid fa-book-open"></i> Lihat Jawaban Lengkap</summary><div class="mt-3 bg-orange-50 border-l-4 border-orange-500 p-4 text-sm rounded"><p class="font-bold text-gray-900 mb-1">Pembahasan:</p><p class="text-gray-700 whitespace-pre-line font-mono text-xs md:text-sm">{JAWABAN_LENGKAP}</p></div></details></div></div></article>"""
 
 # --- 2. CETAKAN HALAMAN LIST (INDEX) ---
-# Navbar disini juga diupdate biar link-nya hidup
 TEMPLATE_INDEX = """
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{JUDUL_HALAMAN} - BankSoal.id</title>
+    <title>{JUDUL_HALAMAN} | BankSoal.id</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -79,34 +78,25 @@ def create_docx(data, filename_base):
     doc.save(f"output/downloads/{filename_base}.docx")
     return f"downloads/{filename_base}.docx"
 
-# --- 4. FUNGSI BIKIN HALAMAN INDEX (REUSABLE) ---
+# --- 4. FUNGSI INDEX HALAMAN ---
 def create_index_page(filename, title, header, materials, active_menu=""):
     links_html = ""
-    # Filter dan Bikin Link
     for m in materials:
         links_html += f"""<a href="{m['link']}" class="block bg-white border rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition group"><h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600">{m['judul']}</h3><p class="text-sm text-gray-500 mt-1"><span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs font-bold mr-2">{m['jenjang']}</span> {m['info']}</p><div class="mt-3 text-blue-500 text-sm font-semibold flex items-center gap-2">Buka Soal <i class="fa-solid fa-arrow-right"></i></div></a>"""
     
     if not links_html: links_html = '<div class="col-span-2 text-center py-10 text-gray-400">Belum ada materi untuk kategori ini.</div>'
 
-    # Set Menu Aktif (Warna Biru)
     active_sd = "text-blue-600" if active_menu == "SD" else ""
     active_smp = "text-blue-600" if active_menu == "SMP" else ""
     active_sma = "text-blue-600" if active_menu == "SMA" else ""
     active_smk = "text-blue-600" if active_menu == "SMK" else ""
 
-    html = TEMPLATE_INDEX.replace("{JUDUL_HALAMAN}", title)\
-                         .replace("{JUDUL_HEADER}", header)\
-                         .replace("{JUMLAH_SOAL}", str(len(materials)))\
-                         .replace("{LIST_LINK}", links_html)\
-                         .replace("{AKTIF_SD}", active_sd)\
-                         .replace("{AKTIF_SMP}", active_smp)\
-                         .replace("{AKTIF_SMA}", active_sma)\
-                         .replace("{AKTIF_SMK}", active_smk)
+    html = TEMPLATE_INDEX.replace("{JUDUL_HALAMAN}", title).replace("{JUDUL_HEADER}", header).replace("{JUMLAH_SOAL}", str(len(materials))).replace("{LIST_LINK}", links_html).replace("{AKTIF_SD}", active_sd).replace("{AKTIF_SMP}", active_smp).replace("{AKTIF_SMA}", active_sma).replace("{AKTIF_SMK}", active_smk)
     
     with open(f'output/{filename}', 'w', encoding='utf-8') as f: f.write(html)
     print(f"🏠 Halaman Index Dibuat: {filename}")
 
-# --- 5. UTAMA ---
+# --- 5. FUNGSI UTAMA (ANTI CRASH & STRICT FALSE) ---
 def generate_pages():
     try:
         with open('template.html', 'r', encoding='utf-8') as f: template_utama = f.read()
@@ -122,49 +112,55 @@ def generate_pages():
 
     for filename in files:
         path = os.path.join(folder_data, filename)
-        with open(path, 'r', encoding='utf-8') as f: data = json.load(f)
-        nama_base = filename.replace('.json', '')
-        link_docx = create_docx(data, nama_base) 
         
-        meta = data.get('meta', {})
-        html_pg = "".join([TEMPLATE_PG.format(NO=q['no'], PERTANYAAN=q['tanya'], OPSI_A=q['opsi_a'], OPSI_B=q['opsi_b'], OPSI_C=q['opsi_c'], OPSI_D=q['opsi_d'], JAWABAN=q['jawaban'], PEMBAHASAN=q['pembahasan']) for q in data.get('soal_pg', [])])
-        html_essay = "".join([TEMPLATE_ESSAY.format(NO=q['no'], PERTANYAAN=q['tanya'], JAWABAN_LENGKAP=q['jawaban_lengkap']) for q in data.get('soal_essay', [])])
-        
-        konten = f'<h2 class="text-xl font-bold text-blue-800 mb-4 border-b pb-2">A. Pilihan Ganda</h2>{html_pg}<div class="w-full flex justify-center my-8"><div class="w-[300px] h-[250px] bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold border-2 border-dashed border-gray-300">[IKLAN TENGAH ARTIKEL]</div></div><h2 class="text-xl font-bold text-orange-800 mt-8 mb-4 border-b pb-2">B. Essay</h2>{html_essay}'
-        halaman = template_utama.replace("{{JUDUL_BAB}}", meta.get('judul_bab', '')).replace("{{JENJANG}}", meta.get('jenjang', '')).replace("{{MAPEL}}", meta.get('mapel', '')).replace("{{KELAS}}", meta.get('kelas', '')).replace("{{LINK_DOWNLOAD}}", link_docx).replace("{{LIST_SOAL}}", konten)
-        
-        with open(f'output/{nama_base}.html', 'w', encoding='utf-8') as f: f.write(halaman)
-        
-        # Simpan data lengkap buat disortir nanti
-        all_materials.append({
-            'judul': meta.get('judul_bab', 'Tanpa Judul'),
-            'jenjang': meta.get('jenjang', 'UMUM').upper(), # Dipaksa Uppercase biar gampang filter
-            'info': f"{meta.get('mapel')} - {meta.get('kelas')}",
-            'link': f"{nama_base}.html"
-        })
-        print(f"✅ Materi: {nama_base}")
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                # 🔥 MAGIC FIX: strict=False MEMBOLEHKAN ENTER DI DALAM TEKS
+                data = json.load(f, strict=False)
+            
+            # PROSES DATA AMAN
+            meta = data.get('meta', {})
+            judul_seo = meta.get('judul_seo', meta.get('judul_bab', 'Bank Soal')) 
+            
+            nama_base = filename.replace('.json', '')
+            link_docx = create_docx(data, nama_base) 
+            
+            html_pg = "".join([TEMPLATE_PG.format(NO=q['no'], PERTANYAAN=q['tanya'], OPSI_A=q['opsi_a'], OPSI_B=q['opsi_b'], OPSI_C=q['opsi_c'], OPSI_D=q['opsi_d'], JAWABAN=q['jawaban'], PEMBAHASAN=q['pembahasan']) for q in data.get('soal_pg', [])])
+            html_essay = "".join([TEMPLATE_ESSAY.format(NO=q['no'], PERTANYAAN=q['tanya'], JAWABAN_LENGKAP=q['jawaban_lengkap']) for q in data.get('soal_essay', [])])
+            
+            konten = f'<h2 class="text-xl font-bold text-blue-800 mb-4 border-b pb-2">A. Pilihan Ganda</h2>{html_pg}<div class="w-full flex justify-center my-8"><div class="w-[300px] h-[250px] bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold border-2 border-dashed border-gray-300">[IKLAN TENGAH ARTIKEL]</div></div><h2 class="text-xl font-bold text-orange-800 mt-8 mb-4 border-b pb-2">B. Essay</h2>{html_essay}'
+            
+            halaman = template_utama.replace("{{JUDUL_BAB}}", judul_seo).replace("{{JUDUL_BAB_H1}}", meta.get('judul_bab', '')).replace("{{JENJANG}}", meta.get('jenjang', '')).replace("{{MAPEL}}", meta.get('mapel', '')).replace("{{KELAS}}", meta.get('kelas', '')).replace("{{LINK_DOWNLOAD}}", link_docx).replace("{{LIST_SOAL}}", konten)
+            
+            with open(f'output/{nama_base}.html', 'w', encoding='utf-8') as f: f.write(halaman)
+            
+            all_materials.append({
+                'judul': meta.get('judul_bab', 'Tanpa Judul'),
+                'jenjang': meta.get('jenjang', 'UMUM').upper(), 
+                'info': f"{meta.get('mapel')} - {meta.get('kelas')}",
+                'link': f"{nama_base}.html"
+            })
+            print(f"✅ Sukses: {filename}")
 
-    # --- GENERATE MULTI-INDEX ---
-    # 1. Halaman Utama (Semua Jenjang)
+        except json.JSONDecodeError as e:
+            # KALAU MASIH ERROR PARAH, KITA KASIH TAU BARISNYA
+            print(f"❌ ERROR JSON RUSAK: {filename}")
+            print(f"   >>> Baris: {e.lineno}, Kolom: {e.colno} (Cek ada karakter aneh/Enter)")
+        except Exception as e:
+            print(f"⚠️ Error Lain di {filename}: {e}")
+
+    # GENERATE HALAMAN INDEX
+    print("\n🏠 Membuat Halaman Index...")
     create_index_page('index.html', 'Bank Soal Lengkap', 'Gudang Bank Soal Terlengkap', all_materials)
+    
+    # Filter Jenjang
+    create_index_page('index_sd.html', 'Bank Soal SD', 'Kumpulan Soal SD', [m for m in all_materials if 'SD' in m['jenjang']], "SD")
+    create_index_page('index_smp.html', 'Bank Soal SMP', 'Kumpulan Soal SMP', [m for m in all_materials if 'SMP' in m['jenjang']], "SMP")
+    create_index_page('index_sma.html', 'Bank Soal SMA', 'Kumpulan Soal SMA', [m for m in all_materials if 'SMA' in m['jenjang']], "SMA")
+    create_index_page('index_smk.html', 'Bank Soal SMK', 'Kumpulan Soal SMK', [m for m in all_materials if 'SMK' in m['jenjang']], "SMK")
 
-    # 2. Halaman SD
-    data_sd = [m for m in all_materials if 'SD' in m['jenjang']]
-    create_index_page('index_sd.html', 'Bank Soal SD', 'Kumpulan Soal SD', data_sd, "SD")
-
-    # 3. Halaman SMP
-    data_smp = [m for m in all_materials if 'SMP' in m['jenjang']]
-    create_index_page('index_smp.html', 'Bank Soal SMP', 'Kumpulan Soal SMP', data_smp, "SMP")
-
-    # 4. Halaman SMA
-    data_sma = [m for m in all_materials if 'SMA' in m['jenjang']]
-    create_index_page('index_sma.html', 'Bank Soal SMA', 'Kumpulan Soal SMA', data_sma, "SMA")
-
-    # 5. Halaman SMK
-    data_smk = [m for m in all_materials if 'SMK' in m['jenjang']]
-    create_index_page('index_smk.html', 'Bank Soal SMK', 'Kumpulan Soal SMK', data_smk, "SMK")
-
-    print("🎉 SUKSES! Semua halaman kategori sudah dibuat.")
+    print("🎉 SELESAI! Coba refresh web lu.")
 
 if __name__ == "__main__":
+    print("🏁 Mulai menjalankan script...")
     generate_pages()

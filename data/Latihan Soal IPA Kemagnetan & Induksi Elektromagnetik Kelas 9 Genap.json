@@ -1,9 +1,12 @@
 {
   "meta": {
+    "nama_file": "ipa-smp-kls9-genap-kemagnetan",
+    "judul_seo": "Soal IPA Kelas 9 Semester Genap: Kemagnetan & Induksi + Kunci",
     "judul_bab": "Latihan Soal Kemagnetan & Induksi Elektromagnetik - 9 SMP Semester Genap",
     "mapel": "IPA",
     "jenjang": "SMP",
     "kelas": "9 SMP",
+    "semester": "GENAP",
     "link_download": "#"
   },
   "soal_pg": [
@@ -65,7 +68,7 @@
       "opsi_c": "100 N",
       "opsi_d": "1000 N",
       "jawaban": "A",
-      "pembahasan": "Diketahui: L = 10 m, I = 5 mA = 0,005 A, B = 20 T. Rumus F = B x I x L. Maka F = 20 x 0,005 x 10 = 1 Newton."
+      "pembahasan": "Diketahui: L = 10 m, I = 5 mA = 0,005 A, B = 20 T.\nRumus: F = B x I x L.\nPerhitungan: F = 20 x 0,005 x 10 = 1 Newton."
     },
     {
       "no": 7,
@@ -95,7 +98,7 @@
       "opsi_c": "440 Volt",
       "opsi_d": "55 Volt",
       "jawaban": "A",
-      "pembahasan": "Rumus: Vp/Vs = Np/Ns. 220/Vs = 200/100. 220/Vs = 2. Vs = 220/2 = 110 Volt."
+      "pembahasan": "Rumus: Vp/Vs = Np/Ns.\n220/Vs = 200/100.\n220/Vs = 2.\nVs = 220/2 = 110 Volt."
     },
     {
       "no": 10,
@@ -115,7 +118,7 @@
       "opsi_c": "125 Watt",
       "opsi_d": "20 Watt",
       "jawaban": "A",
-      "pembahasan": "Efisiensi = (Ps/Pp) x 100%. 80% = (Ps/100) x 100%. 0,8 = Ps/100. Ps = 80 Watt."
+      "pembahasan": "Efisiensi = (Ps/Pp) x 100%.\n80% = (Ps/100) x 100%.\n0,8 = Ps/100.\nPs = 80 Watt."
     },
     {
       "no": 12,
@@ -165,7 +168,7 @@
       "opsi_c": "10 A",
       "opsi_d": "20 A",
       "jawaban": "C",
-      "pembahasan": "Trafo ideal: Vp.Ip = Vs.Is. 220 x 0,5 = 11 x Is. 110 = 11 x Is. Is = 110/11 = 10 A."
+      "pembahasan": "Trafo ideal: Vp.Ip = Vs.Is.\n220 x 0,5 = 11 x Is.\n110 = 11 x Is.\nIs = 110/11 = 10 A."
     },
     {
       "no": 17,
@@ -272,10 +275,10 @@
     {
       "no": 3,
       "tanya": "Jelaskan prinsip kerja dari bel listrik sederhana!",
-      "jawaban_lengkap": "Bel listrik bekerja menggunakan elektromagnet. 
+      "jawaban_lengkap": "Bel listrik bekerja menggunakan elektromagnet. \n\n
 
 [Image of electric bell diagram]
- Saat sakelar ditekan, arus mengalir ke kumparan, mengubah inti besi menjadi magnet. Magnet ini menarik pemukul besi sehingga memukul bel (bunyi). Saat pemukul tertarik, kontak interuptor terputus, arus mati, kemagnetan hilang, dan pemukul kembali ke posisi awal. Kontak tersambung lagi, dan siklus berulang terus menerus."
+\n Saat sakelar ditekan, arus mengalir ke kumparan, mengubah inti besi menjadi magnet. Magnet ini menarik pemukul besi sehingga memukul bel (bunyi). Saat pemukul tertarik, kontak interuptor terputus, arus mati, kemagnetan hilang, dan pemukul kembali ke posisi awal. Kontak tersambung lagi, dan siklus berulang terus menerus."
     },
     {
       "no": 4,
@@ -305,7 +308,7 @@
     {
       "no": 9,
       "tanya": "Bagaimana burung merpati memanfaatkan medan magnet bumi untuk melakukan migrasi atau pulang ke sarangnya?",
-      "jawaban_lengkap": "Di dalam paruh atau otak burung merpati terdapat butiran mineral magnetik (magnetite) yang berfungsi sebagai reseptor magnet.  Reseptor ini sangat sensitif terhadap medan magnet bumi, sehingga burung dapat mendeteksi arah utara-selatan dan posisi geografis seperti memiliki kompas internal untuk navigasi."
+      "jawaban_lengkap": "Di dalam paruh atau otak burung merpati terdapat butiran mineral magnetik (magnetite) yang berfungsi sebagai reseptor magnet. Reseptor ini sangat sensitif terhadap medan magnet bumi, sehingga burung dapat mendeteksi arah utara-selatan dan posisi geografis seperti memiliki kompas internal untuk navigasi."
     },
     {
       "no": 10,
