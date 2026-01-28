@@ -4,11 +4,12 @@ from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-# --- 1. TEMPLATE HTML SOAL (Halaman Isi) ---
+# --- 1. CETAKAN HALAMAN SOAL (BAGIAN TENGAH) ---
 TEMPLATE_PG = """<article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-6"><div class="flex gap-3"><span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded h-fit text-sm">{NO}.</span><div class="w-full"><p class="text-lg font-medium mb-4">{PERTANYAAN}</p><div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4"><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">A.</span> {OPSI_A}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">B.</span> {OPSI_B}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">C.</span> {OPSI_C}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">D.</span> {OPSI_D}</button></div><details class="group"><summary class="flex cursor-pointer items-center gap-2 text-blue-600 font-semibold text-sm select-none"><i class="fa-solid fa-key"></i> Lihat Pembahasan</summary><div class="mt-3 bg-gray-50 border-l-4 border-blue-500 p-4 text-sm rounded"><p class="font-bold text-gray-900 mb-1">Jawaban: {JAWABAN}</p><p class="text-gray-700 whitespace-pre-line">{PEMBAHASAN}</p></div></details></div></div></article>"""
 TEMPLATE_ESSAY = """<article class="bg-white p-6 rounded-xl shadow-sm border border-orange-100 mb-6"><div class="flex gap-3"><span class="bg-orange-100 text-orange-700 font-bold px-3 py-1 rounded h-fit text-sm">Esai {NO}.</span><div class="w-full"><p class="text-lg font-medium mb-4">{PERTANYAAN}</p><textarea class="w-full border p-3 rounded-lg text-sm mb-3 focus:outline-blue-500" rows="3" placeholder="Tulis jawabanmu disini..."></textarea><details class="group"><summary class="flex cursor-pointer items-center gap-2 text-orange-600 font-semibold text-sm select-none"><i class="fa-solid fa-book-open"></i> Lihat Jawaban Lengkap</summary><div class="mt-3 bg-orange-50 border-l-4 border-orange-500 p-4 text-sm rounded"><p class="font-bold text-gray-900 mb-1">Pembahasan:</p><p class="text-gray-700 whitespace-pre-line font-mono text-xs md:text-sm">{JAWABAN_LENGKAP}</p></div></details></div></div></article>"""
 
-# --- 2. TEMPLATE INDEX (HALAMAN DEPAN + IKLAN) ---
+# --- 2. CETAKAN HALAMAN DEPAN (INDEX.HTML) ---
+# Gw update Navbarnya biar ada Link Home & Menu SMK
 TEMPLATE_INDEX = """
 <!DOCTYPE html>
 <html lang="id">
@@ -18,11 +19,19 @@ TEMPLATE_INDEX = """
     <title>Bank Soal Lengkap - Download & Latihan Online</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-gray-50 font-sans">
+    </head>
+<body class="bg-gray-50 font-sans text-gray-800">
     <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-            <span class="font-bold text-xl text-blue-600"><i class="fa-solid fa-graduation-cap"></i> BankSoal.id</span>
+            <a href="index.html" class="font-bold text-xl text-blue-600 hover:text-blue-800 transition flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap"></i> BankSoal.id
+            </a>
+            <div class="flex gap-4 text-sm font-semibold text-gray-500">
+                <a href="#" class="hover:text-blue-600 transition">SD</a>
+                <a href="#" class="hover:text-blue-600 transition">SMP</a>
+                <a href="#" class="hover:text-blue-600 transition">SMA</a>
+                <a href="#" class="hover:text-blue-600 transition">SMK</a>
+            </div>
         </div>
     </nav>
     
@@ -51,7 +60,7 @@ TEMPLATE_INDEX = """
 </html>
 """
 
-# --- 3. FUNGSI BIKIN WORD (Tetap) ---
+# --- 3. FUNGSI GENERATOR WORD ---
 def create_docx(data, filename_base):
     doc = Document()
     meta = data.get('meta', {})
@@ -72,7 +81,7 @@ def create_docx(data, filename_base):
     doc.save(f"output/downloads/{filename_base}.docx")
     return f"downloads/{filename_base}.docx"
 
-# --- 4. FUNGSI UTAMA (Index Generator Updated) ---
+# --- 4. FUNGSI UTAMA ---
 def generate_pages():
     try:
         with open('template.html', 'r', encoding='utf-8') as f: template_utama = f.read()
@@ -108,7 +117,7 @@ def generate_pages():
         })
         print(f"✅ Selesai: {nama_base}")
 
-    print("🏠 Membuat Halaman Depan dengan Iklan...")
+    print("🏠 Update Halaman Depan (index.html)...")
     html_links = ""
     for m in list_materi:
         html_links += f"""<a href="{m['link']}" class="block bg-white border rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition group"><h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600">{m['judul']}</h3><p class="text-sm text-gray-500 mt-1"><i class="fa-solid fa-tag"></i> {m['info']}</p><div class="mt-3 text-blue-500 text-sm font-semibold flex items-center gap-2">Buka Soal <i class="fa-solid fa-arrow-right"></i></div></a>"""
@@ -116,7 +125,7 @@ def generate_pages():
     with open('output/index.html', 'w', encoding='utf-8') as f:
         f.write(TEMPLATE_INDEX.replace("{LIST_LINK}", html_links))
     
-    print("🎉 SUKSES! Web update.")
+    print("🎉 SUKSES! Semua halaman (Depan & Soal) sudah diupdate.")
 
 if __name__ == "__main__":
     generate_pages()
