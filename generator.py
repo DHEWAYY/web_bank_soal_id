@@ -4,22 +4,22 @@ from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-# --- 1. CETAKAN HALAMAN SOAL (BAGIAN TENGAH) ---
+# --- 1. CETAKAN HTML UTAMA ---
 TEMPLATE_PG = """<article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-6"><div class="flex gap-3"><span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded h-fit text-sm">{NO}.</span><div class="w-full"><p class="text-lg font-medium mb-4">{PERTANYAAN}</p><div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4"><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">A.</span> {OPSI_A}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">B.</span> {OPSI_B}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">C.</span> {OPSI_C}</button><button class="text-left px-4 py-2 rounded border hover:bg-blue-50 text-sm"><span class="font-bold mr-2">D.</span> {OPSI_D}</button></div><details class="group"><summary class="flex cursor-pointer items-center gap-2 text-blue-600 font-semibold text-sm select-none"><i class="fa-solid fa-key"></i> Lihat Pembahasan</summary><div class="mt-3 bg-gray-50 border-l-4 border-blue-500 p-4 text-sm rounded"><p class="font-bold text-gray-900 mb-1">Jawaban: {JAWABAN}</p><p class="text-gray-700 whitespace-pre-line">{PEMBAHASAN}</p></div></details></div></div></article>"""
 TEMPLATE_ESSAY = """<article class="bg-white p-6 rounded-xl shadow-sm border border-orange-100 mb-6"><div class="flex gap-3"><span class="bg-orange-100 text-orange-700 font-bold px-3 py-1 rounded h-fit text-sm">Esai {NO}.</span><div class="w-full"><p class="text-lg font-medium mb-4">{PERTANYAAN}</p><textarea class="w-full border p-3 rounded-lg text-sm mb-3 focus:outline-blue-500" rows="3" placeholder="Tulis jawabanmu disini..."></textarea><details class="group"><summary class="flex cursor-pointer items-center gap-2 text-orange-600 font-semibold text-sm select-none"><i class="fa-solid fa-book-open"></i> Lihat Jawaban Lengkap</summary><div class="mt-3 bg-orange-50 border-l-4 border-orange-500 p-4 text-sm rounded"><p class="font-bold text-gray-900 mb-1">Pembahasan:</p><p class="text-gray-700 whitespace-pre-line font-mono text-xs md:text-sm">{JAWABAN_LENGKAP}</p></div></details></div></div></article>"""
 
-# --- 2. CETAKAN HALAMAN DEPAN (INDEX.HTML) ---
-# Gw update Navbarnya biar ada Link Home & Menu SMK
+# --- 2. CETAKAN HALAMAN LIST (INDEX) ---
+# Navbar disini juga diupdate biar link-nya hidup
 TEMPLATE_INDEX = """
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Soal Lengkap - Download & Latihan Online</title>
+    <title>{JUDUL_HALAMAN} - BankSoal.id</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </head>
+</head>
 <body class="bg-gray-50 font-sans text-gray-800">
     <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -27,40 +27,38 @@ TEMPLATE_INDEX = """
                 <i class="fa-solid fa-graduation-cap"></i> BankSoal.id
             </a>
             <div class="flex gap-4 text-sm font-semibold text-gray-500">
-                <a href="#" class="hover:text-blue-600 transition">SD</a>
-                <a href="#" class="hover:text-blue-600 transition">SMP</a>
-                <a href="#" class="hover:text-blue-600 transition">SMA</a>
-                <a href="#" class="hover:text-blue-600 transition">SMK</a>
+                <a href="index_sd.html" class="hover:text-blue-600 transition {AKTIF_SD}">SD</a>
+                <a href="index_smp.html" class="hover:text-blue-600 transition {AKTIF_SMP}">SMP</a>
+                <a href="index_sma.html" class="hover:text-blue-600 transition {AKTIF_SMA}">SMA</a>
+                <a href="index_smk.html" class="hover:text-blue-600 transition {AKTIF_SMK}">SMK</a>
             </div>
         </div>
     </nav>
     
     <main class="max-w-4xl mx-auto px-4 py-8">
-        
         <div class="w-full h-[100px] bg-gray-200 rounded-lg flex items-center justify-center mb-8 border-2 border-dashed border-gray-300">
-            <span class="text-gray-500 font-bold text-sm">[IKLAN ADSENSE - DISPLAY RESPONSIVE]</span>
+            <span class="text-gray-500 font-bold text-sm">[IKLAN ADSENSE - DISPLAY]</span>
         </div>
 
         <div class="text-center mb-10">
-            <h1 class="text-3xl font-bold text-gray-900 mb-3">Gudang Bank Soal Terlengkap</h1>
-            <p class="text-gray-600">Pilih mata pelajaran, kerjakan online, atau download file Word-nya.</p>
+            <h1 class="text-3xl font-bold text-gray-900 mb-3">{JUDUL_HEADER}</h1>
+            <p class="text-gray-600">Total ada <b>{JUMLAH_SOAL}</b> materi latihan siap dikerjakan.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
             {LIST_LINK}
         </div>
-
+        
         <div class="w-full h-[250px] bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
             <span class="text-gray-500 font-bold text-sm">[IKLAN ADSENSE - KOTAK BESAR]</span>
         </div>
-
     </main>
     <footer class="text-center py-8 text-gray-400 text-sm border-t mt-8">&copy; 2024 BankSoal.id Engine</footer>
 </body>
 </html>
 """
 
-# --- 3. FUNGSI GENERATOR WORD ---
+# --- 3. FUNGSI WORD GENERATOR ---
 def create_docx(data, filename_base):
     doc = Document()
     meta = data.get('meta', {})
@@ -81,7 +79,34 @@ def create_docx(data, filename_base):
     doc.save(f"output/downloads/{filename_base}.docx")
     return f"downloads/{filename_base}.docx"
 
-# --- 4. FUNGSI UTAMA ---
+# --- 4. FUNGSI BIKIN HALAMAN INDEX (REUSABLE) ---
+def create_index_page(filename, title, header, materials, active_menu=""):
+    links_html = ""
+    # Filter dan Bikin Link
+    for m in materials:
+        links_html += f"""<a href="{m['link']}" class="block bg-white border rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition group"><h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600">{m['judul']}</h3><p class="text-sm text-gray-500 mt-1"><span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs font-bold mr-2">{m['jenjang']}</span> {m['info']}</p><div class="mt-3 text-blue-500 text-sm font-semibold flex items-center gap-2">Buka Soal <i class="fa-solid fa-arrow-right"></i></div></a>"""
+    
+    if not links_html: links_html = '<div class="col-span-2 text-center py-10 text-gray-400">Belum ada materi untuk kategori ini.</div>'
+
+    # Set Menu Aktif (Warna Biru)
+    active_sd = "text-blue-600" if active_menu == "SD" else ""
+    active_smp = "text-blue-600" if active_menu == "SMP" else ""
+    active_sma = "text-blue-600" if active_menu == "SMA" else ""
+    active_smk = "text-blue-600" if active_menu == "SMK" else ""
+
+    html = TEMPLATE_INDEX.replace("{JUDUL_HALAMAN}", title)\
+                         .replace("{JUDUL_HEADER}", header)\
+                         .replace("{JUMLAH_SOAL}", str(len(materials)))\
+                         .replace("{LIST_LINK}", links_html)\
+                         .replace("{AKTIF_SD}", active_sd)\
+                         .replace("{AKTIF_SMP}", active_smp)\
+                         .replace("{AKTIF_SMA}", active_sma)\
+                         .replace("{AKTIF_SMK}", active_smk)
+    
+    with open(f'output/{filename}', 'w', encoding='utf-8') as f: f.write(html)
+    print(f"🏠 Halaman Index Dibuat: {filename}")
+
+# --- 5. UTAMA ---
 def generate_pages():
     try:
         with open('template.html', 'r', encoding='utf-8') as f: template_utama = f.read()
@@ -90,7 +115,8 @@ def generate_pages():
     folder_data = 'data'
     os.makedirs('output', exist_ok=True)
     files = [f for f in os.listdir(folder_data) if f.endswith('.json')]
-    list_materi = [] 
+    
+    all_materials = []
 
     print(f"🚀 Memproses {len(files)} materi...")
 
@@ -105,27 +131,40 @@ def generate_pages():
         html_essay = "".join([TEMPLATE_ESSAY.format(NO=q['no'], PERTANYAAN=q['tanya'], JAWABAN_LENGKAP=q['jawaban_lengkap']) for q in data.get('soal_essay', [])])
         
         konten = f'<h2 class="text-xl font-bold text-blue-800 mb-4 border-b pb-2">A. Pilihan Ganda</h2>{html_pg}<div class="w-full flex justify-center my-8"><div class="w-[300px] h-[250px] bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold border-2 border-dashed border-gray-300">[IKLAN TENGAH ARTIKEL]</div></div><h2 class="text-xl font-bold text-orange-800 mt-8 mb-4 border-b pb-2">B. Essay</h2>{html_essay}'
-        
         halaman = template_utama.replace("{{JUDUL_BAB}}", meta.get('judul_bab', '')).replace("{{JENJANG}}", meta.get('jenjang', '')).replace("{{MAPEL}}", meta.get('mapel', '')).replace("{{KELAS}}", meta.get('kelas', '')).replace("{{LINK_DOWNLOAD}}", link_docx).replace("{{LIST_SOAL}}", konten)
         
         with open(f'output/{nama_base}.html', 'w', encoding='utf-8') as f: f.write(halaman)
         
-        list_materi.append({
+        # Simpan data lengkap buat disortir nanti
+        all_materials.append({
             'judul': meta.get('judul_bab', 'Tanpa Judul'),
+            'jenjang': meta.get('jenjang', 'UMUM').upper(), # Dipaksa Uppercase biar gampang filter
             'info': f"{meta.get('mapel')} - {meta.get('kelas')}",
             'link': f"{nama_base}.html"
         })
-        print(f"✅ Selesai: {nama_base}")
+        print(f"✅ Materi: {nama_base}")
 
-    print("🏠 Update Halaman Depan (index.html)...")
-    html_links = ""
-    for m in list_materi:
-        html_links += f"""<a href="{m['link']}" class="block bg-white border rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition group"><h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600">{m['judul']}</h3><p class="text-sm text-gray-500 mt-1"><i class="fa-solid fa-tag"></i> {m['info']}</p><div class="mt-3 text-blue-500 text-sm font-semibold flex items-center gap-2">Buka Soal <i class="fa-solid fa-arrow-right"></i></div></a>"""
-    
-    with open('output/index.html', 'w', encoding='utf-8') as f:
-        f.write(TEMPLATE_INDEX.replace("{LIST_LINK}", html_links))
-    
-    print("🎉 SUKSES! Semua halaman (Depan & Soal) sudah diupdate.")
+    # --- GENERATE MULTI-INDEX ---
+    # 1. Halaman Utama (Semua Jenjang)
+    create_index_page('index.html', 'Bank Soal Lengkap', 'Gudang Bank Soal Terlengkap', all_materials)
+
+    # 2. Halaman SD
+    data_sd = [m for m in all_materials if 'SD' in m['jenjang']]
+    create_index_page('index_sd.html', 'Bank Soal SD', 'Kumpulan Soal SD', data_sd, "SD")
+
+    # 3. Halaman SMP
+    data_smp = [m for m in all_materials if 'SMP' in m['jenjang']]
+    create_index_page('index_smp.html', 'Bank Soal SMP', 'Kumpulan Soal SMP', data_smp, "SMP")
+
+    # 4. Halaman SMA
+    data_sma = [m for m in all_materials if 'SMA' in m['jenjang']]
+    create_index_page('index_sma.html', 'Bank Soal SMA', 'Kumpulan Soal SMA', data_sma, "SMA")
+
+    # 5. Halaman SMK
+    data_smk = [m for m in all_materials if 'SMK' in m['jenjang']]
+    create_index_page('index_smk.html', 'Bank Soal SMK', 'Kumpulan Soal SMK', data_smk, "SMK")
+
+    print("🎉 SUKSES! Semua halaman kategori sudah dibuat.")
 
 if __name__ == "__main__":
     generate_pages()
