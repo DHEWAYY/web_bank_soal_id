@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "judul_bab": "Latihan Soal Penjumlahan & Pengurangan - 3 SD Semester GANJIL",
+    "mapel": "MATEMATIKA",
+    "jenjang": "SD",
+    "kelas": "3 SD",
+    "link_download": "#"
+  },
+  "soal_pg": [
+    {
+      "no": 1,
+      "tanya": "Hasil dari 1.230 + 1.120 adalah...",
+      "opsi_a": "2.350",
+      "opsi_b": "2.340",
+      "opsi_c": "2.250",
+      "opsi_d": "2.450",
+      "jawaban": "A",
+      "pembahasan": "Penjumlahan tanpa menyimpan: 0+0=0, 3+2=5, 2+1=3, 1+1=2. Hasil: 2.350."
+    },
+    {
+      "no": 2,
+      "tanya": "Pak Budi memanen 2.456 kg padi, kemudian memanen lagi 1.328 kg. Total hasil panen Pak Budi adalah...",
+      "opsi_a": "3.774 kg",
+      "opsi_b": "3.784 kg",
+      "opsi_c": "3.884 kg",
+      "opsi_d": "3.674 kg",
+      "jawaban": "B",
+      "pembahasan": "6+8=14 (tulis 4 simpan 1), 1+5+2=8, 4+3=7, 2+1=3. Hasil: 3.784."
+    },
+    {
+      "no": 3,
+      "tanya": "Hasil pengurangan dari 4.500 - 1.250 adalah...",
+      "opsi_a": "3.350",
+      "opsi_b": "3.250",
+      "opsi_c": "3.150",
+      "opsi_d": "2.250",
+      "jawaban": "B",
+      "pembahasan": "0-0=0, 0-5 (pinjam 1) jadi 10-5=5, 4-2=2, 4-1=3. Hasil: 3.250."
+    },
+    {
+      "no": 4,
+      "tanya": "Perhatikan operasi hitung berikut: 325 + n = 600. Nilai n yang tepat adalah...",
+      "opsi_a": "225",
+      "opsi_b": "275",
+      "opsi_c": "325",
+      "opsi_d": "375",
+      "jawaban": "B",
+      "pembahasan": "n = 600 - 325. Hitungan: 600 - 325 = 275."
+    },
+    {
+      "no": 5,
+      "tanya": "Di perpustakaan terdapat 2.150 buku cerita dan 1.425 buku pelajaran. Jumlah seluruh buku adalah...",
+      "opsi_a": "3.575",
+      "opsi_b": "3.475",
+      "opsi_c": "3.675",
+      "opsi_d": "3.525",
+      "jawaban": "A",
+      "pembahasan": "2.150 + 1.425 = 3.575."
+    },
+    {
+      "no": 6,
+      "tanya": "Selisih antara bilangan 5.678 dan 2.345 adalah...",
+      "opsi_a": "3.323",
+      "opsi_b": "3.333",
+      "opsi_c": "3.343",
+      "opsi_d": "3.353",
+      "jawaban": "B",
+      "pembahasan": "Selisih artinya dikurang. 5.678 - 2.345 = 3.333."
+    },
+    {
+      "no": 7,
+      "tanya": "Sebuah toko mainan memiliki stok 3.000 robot. Hari ini terjual 1.255 robot. Sisa robot di toko adalah...",
+      "opsi_a": "1.845",
+      "opsi_b": "1.745",
+      "opsi_c": "1.755",
+      "opsi_d": "1.645",
+      "jawaban": "B",
+      "pembahasan": "3.000 - 1.255. Pinjam berantai: 10-5=5, 9-5=4, 9-2=7, 2-1=1. Hasil: 1.745."
+    },
+    {
+      "no": 8,
+      "tanya": "Angka yang tepat untuk mengisi titik-titik pada 1.200 + ... = 3.500 adalah...",
+      "opsi_a": "2.200",
+      "opsi_b": "2.300",
+      "opsi_c": "1.300",
+      "opsi_d": "2.500",
+      "jawaban": "B",
+      "pembahasan": "3.500 - 1.200 = 2.300."
+    },
+    {
+      "no": 9,
+      "tanya": "Hasil dari 1.500 + 450 - 300 adalah...",
+      "opsi_a": "1.650",
+      "opsi_b": "1.550",
+      "opsi_c": "1.750",
+      "opsi_d": "1.950",
+      "jawaban": "A",
+      "pembahasan": "1.500 + 450 = 1.950. Kemudian 1.950 - 300 = 1.650."
+    },
+    {
+      "no": 10,
+      "tanya": "Ibu membeli gula seharga Rp12.500 dan kopi seharga Rp9.500. Ibu membayar dengan uang Rp25.000. Kembalian yang diterima Ibu adalah...",
+      "opsi_a": "Rp2.000",
+      "opsi_b": "Rp3.000",
+      "opsi_c": "Rp4.000",
+      "opsi_d": "Rp5.000",
+      "jawaban": "B",
+      "pembahasan": "Total belanja: 12.500 + 9.500 = 22.000. Kembalian: 25.000 - 22.000 = 3.000."
+    },
+    {
+      "no": 11,
+      "tanya": "Bilangan manakah yang jika ditambahkan dengan 2.500 hasilnya 6.000?",
+      "opsi_a": "3.500",
+      "opsi_b": "4.500",
+      "opsi_c": "3.000",
+      "opsi_d": "4.000",
+      "jawaban": "A",
+      "pembahasan": "6.000 - 2.500 = 3.500."
+    },
+    {
+      "no": 12,
+      "tanya": "Hasil penjumlahan dari 3 ribuan + 4 ratusan + 5 puluhan + 2 satuan adalah...",
+      "opsi_a": "3.425",
+      "opsi_b": "3.452",
+      "opsi_c": "3.542",
+      "opsi_d": "4.352",
+      "jawaban": "B",
+      "pembahasan": "3.000 + 400 + 50 + 2 = 3.452."
+    },
+    {
+      "no": 13,
+      "tanya": "Ayah menempuh jarak 1.200 meter ke kantor, kemudian pergi ke pasar sejauh 800 meter. Total jarak yang ditempuh Ayah adalah...",
+      "opsi_a": "1.800 meter",
+      "opsi_b": "2.000 meter",
+      "opsi_c": "2.200 meter",
+      "opsi_d": "2.100 meter",
+      "jawaban": "B",
+      "pembahasan": "1.200 + 800 = 2.000 meter."
+    },
+    {
+      "no": 14,
+      "tanya": "Manakah pernyataan yang benar?",
+      "opsi_a": "2.300 + 1.200 > 3.600",
+      "opsi_b": "4.500 - 1.000 < 3.000",
+      "opsi_c": "1.500 + 1.500 = 3.000",
+      "opsi_d": "5.000 - 2.000 = 2.000",
+      "jawaban": "C",
+      "pembahasan": "Cek satu per satu. A salah (3.500 tidak lebih besar dari 3.600). B salah (3.500 tidak lebih kecil dari 3.000). C benar. D salah (hasilnya 3.000)."
+    },
+    {
+      "no": 15,
+      "tanya": "Jika A = 1.234 dan B = 566, maka A + B = ...",
+      "opsi_a": "1.700",
+      "opsi_b": "1.800",
+      "opsi_c": "1.900",
+      "opsi_d": "2.000",
+      "jawaban": "B",
+      "pembahasan": "1.234 + 566. 4+6=10 (0 simpan 1), 1+3+6=10 (0 simpan 1), 1+2+5=8, 1 turun. Hasil: 1.800."
+    },
+    {
+      "no": 16,
+      "tanya": "Di sebuah konser ada 2.500 penonton pria dan 2.100 penonton wanita. Di tengah acara, 300 penonton pulang. Berapa penonton yang tersisa?",
+      "opsi_a": "4.300",
+      "opsi_b": "4.600",
+      "opsi_c": "4.900",
+      "opsi_d": "4.200",
+      "jawaban": "A",
+      "pembahasan": "Total awal: 2.500 + 2.100 = 4.600. Sisa: 4.600 - 300 = 4.300."
+    },
+    {
+      "no": 17,
+      "tanya": "Operasi hitung manakah yang hasilnya paling besar?",
+      "opsi_a": "1.000 + 500",
+      "opsi_b": "2.000 - 400",
+      "opsi_c": "800 + 600",
+      "opsi_d": "1.900 - 100",
+      "jawaban": "D",
+      "pembahasan": "A=1.500, B=1.600, C=1.400, D=1.800. Paling besar adalah D."
+    },
+    {
+      "no": 18,
+      "tanya": "5.432 - 2.1xy = 3.321. Nilai x dan y berturut-turut adalah...",
+      "opsi_a": "1 dan 1",
+      "opsi_b": "1 dan 2",
+      "opsi_c": "2 dan 1",
+      "opsi_d": "2 dan 2",
+      "jawaban": "A",
+      "pembahasan": "Lihat angka belakang. 2-y=1 maka y=1. 3-x=2 maka x=1."
+    },
+    {
+      "no": 19,
+      "tanya": "Budi mempunyai kelereng 1.050. Ia kalah bermain 250 kelereng, lalu membeli lagi 100 kelereng. Jumlah kelereng Budi sekarang adalah...",
+      "opsi_a": "800",
+      "opsi_b": "900",
+      "opsi_c": "1.000",
+      "opsi_d": "1.100",
+      "jawaban": "B",
+      "pembahasan": "1.050 - 250 = 800. 800 + 100 = 900."
+    },
+    {
+      "no": 20,
+      "tanya": "Hasil dari 3.105 + 2.895 adalah...",
+      "opsi_a": "5.900",
+      "opsi_b": "6.000",
+      "opsi_c": "6.100",
+      "opsi_d": "5.990",
+      "jawaban": "B",
+      "pembahasan": "5+5=10 (0 simpan 1), 1+0+9=10 (0 simpan 1), 1+1+8=10 (0 simpan 1), 1+3+2=6. Hasil: 6.000."
+    },
+    {
+      "no": 21,
+      "tanya": "Sifat komutatif (pertukaran) pada penjumlahan ditunjukkan oleh...",
+      "opsi_a": "100 + 200 = 300",
+      "opsi_b": "100 + 200 = 200 + 100",
+      "opsi_c": "100 - 50 = 50",
+      "opsi_d": "(100+20)+30 = 100+(20+30)",
+      "jawaban": "B",
+      "pembahasan": "Sifat komutatif artinya posisi bilangan ditukar hasilnya sama (a+b = b+a)."
+    },
+    {
+      "no": 22,
+      "tanya": "Selisih angka 8 dan angka 2 pada bilangan 8.320 adalah...",
+      "opsi_a": "7.980",
+      "opsi_b": "600",
+      "opsi_c": "7.800",
+      "opsi_d": "5.000",
+      "jawaban": "A",
+      "pembahasan": "Angka 8 bernilai 8.000. Angka 2 bernilai 20. Selisih: 8.000 - 20 = 7.980."
+    },
+    {
+      "no": 23,
+      "tanya": "Jumlah siswa SD Merdeka adalah 450 siswa laki-laki dan 375 siswa perempuan. Berapa total siswa di SD tersebut?",
+      "opsi_a": "825",
+      "opsi_b": "725",
+      "opsi_c": "835",
+      "opsi_d": "735",
+      "jawaban": "A",
+      "pembahasan": "450 + 375 = 825."
+    },
+    {
+      "no": 24,
+      "tanya": "Ayah mengisi bensin 40 liter. Dalam perjalanan bensin berkurang 25 liter. Lalu Ayah mengisi lagi 15 liter. Berapa liter bensin di tangki sekarang?",
+      "opsi_a": "20 liter",
+      "opsi_b": "30 liter",
+      "opsi_c": "40 liter",
+      "opsi_d": "35 liter",
+      "jawaban": "B",
+      "pembahasan": "40 - 25 = 15. 15 + 15 = 30 liter."
+    },
+    {
+      "no": 25,
+      "tanya": "Bilangan manakah yang jika dikurangi 1.500 hasilnya adalah 2.250?",
+      "opsi_a": "3.250",
+      "opsi_b": "3.500",
+      "opsi_c": "3.750",
+      "opsi_d": "4.000",
+      "jawaban": "C",
+      "pembahasan": "Bilangan awal = Hasil + Pengurang. 2.250 + 1.500 = 3.750."
+    }
+  ],
+  "soal_essay": [
+    {
+      "no": 1,
+      "tanya": "Pak Tani memanen 1.250 jagung pada hari Senin dan 1.400 jagung pada hari Selasa. Sebanyak 2.100 jagung telah dijual ke pasar. Berapa sisa jagung yang dimiliki Pak Tani?",
+      "jawaban_lengkap": "Langkah 1 (Total Panen): 1.250 + 1.400 = 2.650. Langkah 2 (Sisa setelah dijual): 2.650 - 2.100 = 550 jagung."
+    },
+    {
+      "no": 2,
+      "tanya": "Isilah kotak kosong pada operasi berikut: 2.3[]5 + 1.[]24 = 3.969. Tentukan angka di dalam kotak!",
+      "jawaban_lengkap": "Satuan: 5+4=9 (Pas). Puluhan: []+2=6, maka []=4. Ratusan: 3+[]=9, maka []=6. Ribuan: 2+1=3 (Pas). Jadi angka yang hilang adalah 4 dan 6."
+    },
+    {
+      "no": 3,
+      "tanya": "Jarak kota A ke kota B adalah 2.500 meter. Jarak kota B ke kota C adalah 1.300 meter. Jika Beni berangkat dari kota A ke kota C melalui kota B, kemudian kembali lagi ke kota B, berapa meter total perjalanan Beni?",
+      "jawaban_lengkap": "Perjalanan berangkat (A->B->C): 2.500 + 1.300 = 3.800 meter. Kembali (C->B): 1.300 meter. Total: 3.800 + 1.300 = 5.100 meter."
+    },
+    {
+      "no": 4,
+      "tanya": "Tentukan dua bilangan cacah yang jika dijumlahkan hasilnya 5.000 dan jika dikurangkan (selisihnya) adalah 1.000!",
+      "jawaban_lengkap": "Misal bilangan itu A dan B. A + B = 5.000. A - B = 1.000. Maka A = 3.000 dan B = 2.000. (Cara logika: 5000 dibagi 2 = 2500, lalu geser 500 ke salah satu sisi)."
+    },
+    {
+      "no": 5,
+      "tanya": "Seorang pedagang telur memiliki persediaan 4.500 butir. Dalam pengiriman, pecah sebanyak 150 butir. Kemudian ia membeli lagi 1.000 butir dari peternak. Berapa jumlah telur yang layak jual sekarang?",
+      "jawaban_lengkap": "Langkah 1 (Dikurangi pecah): 4.500 - 150 = 4.350. Langkah 2 (Ditambah beli lagi): 4.350 + 1.000 = 5.350 butir."
+    },
+    {
+      "no": 6,
+      "tanya": "Buatlah soal cerita sendiri yang kalimat matematikanya adalah: 2.500 - 1.200 + 500 = n. Lalu hitunglah hasilnya!",
+      "jawaban_lengkap": "Contoh soal: Ibu punya uang Rp2.500. Digunakan jajan Rp1.200. Lalu diberi Ayah Rp500. Berapa uang Ibu sekarang? Jawab: 2.500 - 1.200 = 1.300. 1.300 + 500 = 1.800."
+    },
+    {
+      "no": 7,
+      "tanya": "Jumlah penonton di tribun A adalah 1.245 orang, tribun B 1.350 orang, dan tribun C 1.100 orang. Berapa selisih jumlah penonton terbanyak dan tersedikit?",
+      "jawaban_lengkap": "Terbanyak (Tribun B): 1.350. Tersedikit (Tribun C): 1.100. Selisih: 1.350 - 1.100 = 250 orang."
+    },
+    {
+      "no": 8,
+      "tanya": "Andi salah menghitung 2.345 + 1.213 hasilnya 3.557. Coba periksa apakah jawaban Andi benar atau salah dengan menghitung ulang!",
+      "jawaban_lengkap": "5+3=8 (Satuan), 4+1=5 (Puluhan), 3+2=5 (Ratusan), 2+1=3 (Ribuan). Hasil yang benar adalah 3.558. Jadi jawaban Andi SALAH (kurang 1 di satuan)."
+    },
+    {
+      "no": 9,
+      "tanya": "Susunlah angka 1, 3, 5, 7 menjadi dua bilangan 2 digit yang jika dijumlahkan menghasilkan nilai terbesar. Berapa hasilnya?",
+      "jawaban_lengkap": "Agar jumlah terbesar, tempatkan angka terbesar di puluhan. Bilangan 1: 73, Bilangan 2: 51 (atau 71 dan 53). Penjumlahan: 73 + 51 = 124."
+    },
+    {
+      "no": 10,
+      "tanya": "Di gudang terdapat 3 tumpukan karung beras. Tumpukan pertama 1.200 kg, tumpukan kedua 500 kg lebih berat dari tumpukan pertama, dan tumpukan ketiga 200 kg lebih ringan dari tumpukan pertama. Berapa total berat beras seluruhnya?",
+      "jawaban_lengkap": "Tumpukan 1: 1.200 kg. Tumpukan 2: 1.200 + 500 = 1.700 kg. Tumpukan 3: 1.200 - 200 = 1.000 kg. Total: 1.200 + 1.700 + 1.000 = 3.900 kg."
+    }
+  ]
+}

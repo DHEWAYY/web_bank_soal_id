@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "judul_bab": "Latihan Soal Pecahan Sederhana - 3 SD Semester GANJIL",
+    "mapel": "MATEMATIKA",
+    "jenjang": "SD",
+    "kelas": "3 SD",
+    "link_download": "#"
+  },
+  "soal_pg": [
+    {
+      "no": 1,
+      "tanya": "Bilangan pecahan terdiri dari dua angka, yaitu angka di atas dan angka di bawah. Angka yang berada di atas disebut...",
+      "opsi_a": "Penyebut",
+      "opsi_b": "Pembilang",
+      "opsi_c": "Pencacah",
+      "opsi_d": "Pembagi",
+      "jawaban": "B",
+      "pembahasan": "Dalam pecahan a/b, a (atas) disebut pembilang dan b (bawah) disebut penyebut."
+    },
+    {
+      "no": 2,
+      "tanya": "Ibu memotong sebuah kue bolu menjadi 4 bagian sama besar. Satu bagian kue tersebut bernilai pecahan...",
+      "opsi_a": "1/2",
+      "opsi_b": "1/3",
+      "opsi_c": "1/4",
+      "opsi_d": "4/1",
+      "jawaban": "C",
+      "pembahasan": "1 benda dibagi menjadi 4 bagian sama besar, maka setiap bagian bernilai 1/4."
+    },
+    {
+      "no": 3,
+      "tanya": "Pada pecahan 3/8, angka 8 disebut...",
+      "opsi_a": "Pembilang",
+      "opsi_b": "Penyebut",
+      "opsi_c": "Pembagi",
+      "opsi_d": "Hasil",
+      "jawaban": "B",
+      "pembahasan": "Angka yang berada di bawah pada pecahan disebut penyebut."
+    },
+    {
+      "no": 4,
+      "tanya": "Pecahan 'dua per lima' ditulis dengan lambang bilangan...",
+      "opsi_a": "2/5",
+      "opsi_b": "5/2",
+      "opsi_c": "25",
+      "opsi_d": "52",
+      "jawaban": "A",
+      "pembahasan": "Dua per lima ditulis angka 2 di atas (pembilang) dan 5 di bawah (penyebut), yaitu 2/5."
+    },
+    {
+      "no": 5,
+      "tanya": "Perhatikan pecahan 1/2, 1/3, dan 1/4. Pecahan yang nilainya paling besar adalah...",
+      "opsi_a": "1/4",
+      "opsi_b": "1/3",
+      "opsi_c": "1/2",
+      "opsi_d": "Semua sama",
+      "jawaban": "C",
+      "pembahasan": "Semakin kecil penyebutnya (angka bawah), maka potongan bendanya semakin besar. Jadi 1/2 paling besar."
+    },
+    {
+      "no": 6,
+      "tanya": "Sebuah semangka dibagi menjadi 6 potong sama besar. Ani memakan 2 potong. Pecahan yang menunjukkan bagian yang dimakan Ani adalah...",
+      "opsi_a": "1/6",
+      "opsi_b": "2/6",
+      "opsi_c": "3/6",
+      "opsi_d": "6/2",
+      "jawaban": "B",
+      "pembahasan": "Bagian yang diambil = 2, Total bagian = 6. Maka pecahannya 2/6."
+    },
+    {
+      "no": 7,
+      "tanya": "Tanda perbandingan yang tepat untuk 2/5 ... 4/5 adalah...",
+      "opsi_a": ">",
+      "opsi_b": "<",
+      "opsi_c": "=",
+      "opsi_d": "+",
+      "jawaban": "B",
+      "pembahasan": "Karena penyebutnya sama (5), bandingkan pembilangnya. 2 lebih kecil dari 4, maka 2/5 < 4/5."
+    },
+    {
+      "no": 8,
+      "tanya": "Hasil penjumlahan dari 2/7 + 3/7 adalah...",
+      "opsi_a": "5/14",
+      "opsi_b": "6/7",
+      "opsi_c": "5/7",
+      "opsi_d": "6/14",
+      "jawaban": "C",
+      "pembahasan": "Penyebut sama tidak dijumlahkan. Jumlahkan pembilangnya saja: 2 + 3 = 5. Hasilnya 5/7."
+    },
+    {
+      "no": 9,
+      "tanya": "Dayu memiliki pita 3/8 meter. Siti memiliki pita 5/8 meter. Panjang pita keduanya jika digabung adalah...",
+      "opsi_a": "8/8 meter",
+      "opsi_b": "2/8 meter",
+      "opsi_c": "8/16 meter",
+      "opsi_d": "15/64 meter",
+      "jawaban": "A",
+      "pembahasan": "3/8 + 5/8 = (3+5)/8 = 8/8 (atau 1 meter)."
+    },
+    {
+      "no": 10,
+      "tanya": "Pecahan 4/4 senilai dengan bilangan bulat...",
+      "opsi_a": "0",
+      "opsi_b": "1",
+      "opsi_c": "4",
+      "opsi_d": "16",
+      "jawaban": "B",
+      "pembahasan": "Jika pembilang dan penyebut sama, maka nilainya adalah 1."
+    },
+    {
+      "no": 11,
+      "tanya": "Ibu mempunyai 1 buah apel. Apel itu dipotong menjadi 2 bagian sama besar. Setiap bagian disebut...",
+      "opsi_a": "Satu per dua",
+      "opsi_b": "Satu per satu",
+      "opsi_c": "Dua per satu",
+      "opsi_d": "Dua per dua",
+      "jawaban": "A",
+      "pembahasan": "Satu benda dibagi dua = setengah atau satu per dua (1/2)."
+    },
+    {
+      "no": 12,
+      "tanya": "Hasil pengurangan dari 7/9 - 4/9 adalah...",
+      "opsi_a": "3/0",
+      "opsi_b": "11/9",
+      "opsi_c": "3/18",
+      "opsi_d": "3/9",
+      "jawaban": "D",
+      "pembahasan": "Penyebut sama, kurangkan pembilangnya: 7 - 4 = 3. Hasilnya 3/9."
+    },
+    {
+      "no": 13,
+      "tanya": "Manakah di bawah ini yang merupakan pecahan dengan nilai terkecil?",
+      "opsi_a": "1/10",
+      "opsi_b": "1/2",
+      "opsi_c": "1/5",
+      "opsi_d": "1/8",
+      "jawaban": "A",
+      "pembahasan": "Pada pecahan dengan pembilang 1, semakin besar penyebutnya, semakin kecil nilainya. 10 adalah penyebut terbesar, maka 1/10 terkecil."
+    },
+    {
+      "no": 14,
+      "tanya": "Edo membawa bekal cokelat batangan yang dibagi menjadi 10 potong. Edo memakan 3 potong. Sisa cokelat Edo adalah...",
+      "opsi_a": "3/10",
+      "opsi_b": "7/10",
+      "opsi_c": "10/10",
+      "opsi_d": "7/7",
+      "jawaban": "B",
+      "pembahasan": "Utuh = 10/10. Dimakan = 3/10. Sisa = 10/10 - 3/10 = 7/10."
+    },
+    {
+      "no": 15,
+      "tanya": "Tanda yang tepat untuk mengisi titik-titik pada 3/6 ... 5/6 adalah...",
+      "opsi_a": ">",
+      "opsi_b": "<",
+      "opsi_c": "=",
+      "opsi_d": "/",
+      "jawaban": "B",
+      "pembahasan": "Pembilang 3 lebih kecil dari 5. Maka 3/6 < 5/6."
+    },
+    {
+      "no": 16,
+      "tanya": "Pecahan lima per delapan ditulis...",
+      "opsi_a": "5-8",
+      "opsi_b": "8/5",
+      "opsi_c": "5/8",
+      "opsi_d": "58",
+      "jawaban": "C",
+      "pembahasan": "Lima (pembilang) per Delapan (penyebut) = 5/8."
+    },
+    {
+      "no": 17,
+      "tanya": "Sebuah kertas lipat dibagi menjadi 4 bagian. 2 bagian diarsir. Nilai pecahan bagian yang diarsir adalah...",
+      "opsi_a": "1/4",
+      "opsi_b": "2/4",
+      "opsi_c": "3/4",
+      "opsi_d": "4/2",
+      "jawaban": "B",
+      "pembahasan": "Bagian diarsir (2) per total bagian (4) = 2/4."
+    },
+    {
+      "no": 18,
+      "tanya": "Kakak mempunyai tali rafia 6/8 meter. Digunakan untuk mengikat koran 4/8 meter. Sisa tali kakak adalah...",
+      "opsi_a": "2/8",
+      "opsi_b": "10/8",
+      "opsi_c": "2/0",
+      "opsi_d": "2/16",
+      "jawaban": "A",
+      "pembahasan": "6/8 - 4/8 = 2/8."
+    },
+    {
+      "no": 19,
+      "tanya": "Budi mempunyai satu buah melon. Ia ingin membaginya kepada 8 orang temannya sama rata. Setiap teman akan mendapatkan bagian sebesar...",
+      "opsi_a": "1/8",
+      "opsi_b": "8/1",
+      "opsi_c": "8/8",
+      "opsi_d": "1/1",
+      "jawaban": "A",
+      "pembahasan": "1 benda dibagi 8 orang = 1/8."
+    },
+    {
+      "no": 20,
+      "tanya": "Di dalam kelas terdapat 1/3 siswa laki-laki dan sisanya perempuan. Berapa bagian siswa perempuan?",
+      "opsi_a": "1/3",
+      "opsi_b": "2/3",
+      "opsi_c": "3/3",
+      "opsi_d": "0/3",
+      "jawaban": "B",
+      "pembahasan": "Total siswa = 1 (atau 3/3). Perempuan = 3/3 - 1/3 = 2/3."
+    },
+    {
+      "no": 21,
+      "tanya": "Manakah penjumlahan berikut yang hasilnya 1?",
+      "opsi_a": "1/2 + 1/3",
+      "opsi_b": "2/5 + 2/5",
+      "opsi_c": "3/6 + 2/6",
+      "opsi_d": "2/4 + 2/4",
+      "jawaban": "D",
+      "pembahasan": "2/4 + 2/4 = 4/4. Nilai 4/4 sama dengan 1."
+    },
+    {
+      "no": 22,
+      "tanya": "Perhatikan gambar persegi panjang yang dibagi 5 kotak. Jika 3 kotak diwarnai merah, maka kotak yang TIDAK berwarna merah bernilai...",
+      "opsi_a": "3/5",
+      "opsi_b": "2/5",
+      "opsi_c": "5/5",
+      "opsi_d": "1/5",
+      "jawaban": "B",
+      "pembahasan": "Total 5. Merah 3. Tidak merah = 5 - 3 = 2. Pecahannya 2/5."
+    },
+    {
+      "no": 23,
+      "tanya": "Pecahan 1/2 dibaca...",
+      "opsi_a": "Seperdua atau setengah",
+      "opsi_b": "Satu dua",
+      "opsi_c": "Satu bagi dua",
+      "opsi_d": "Dua per satu",
+      "jawaban": "A",
+      "pembahasan": "Cara membaca 1/2 adalah satu per dua, seperdua, atau setengah."
+    },
+    {
+      "no": 24,
+      "tanya": "Ayah mengisi bensin tangki motor 1/5 bagian, lalu mengisi lagi 3/5 bagian. Isi tangki sekarang adalah...",
+      "opsi_a": "2/5",
+      "opsi_b": "3/5",
+      "opsi_c": "4/5",
+      "opsi_d": "5/5",
+      "jawaban": "C",
+      "pembahasan": "1/5 + 3/5 = 4/5."
+    },
+    {
+      "no": 25,
+      "tanya": "Lani makan 1/6 kue, Dayu makan 2/6 kue, dan Siti makan 2/6 kue. Jumlah kue yang dimakan mereka bertiga adalah...",
+      "opsi_a": "4/6",
+      "opsi_b": "5/6",
+      "opsi_c": "6/6",
+      "opsi_d": "3/6",
+      "jawaban": "B",
+      "pembahasan": "1/6 + 2/6 + 2/6 = 5/6."
+    }
+  ],
+  "soal_essay": [
+    {
+      "no": 1,
+      "tanya": "Gambarkan sebuah lingkaran, lalu arsir bagian yang menunjukkan pecahan 1/4!",
+      "jawaban_lengkap": "Siswa menggambar satu lingkaran penuh, membaginya menjadi 4 bagian sama besar, lalu mengarsir (mewarnai) salah satu bagiannya saja."
+    },
+    {
+      "no": 2,
+      "tanya": "Jelaskan mengapa pecahan 1/2 nilainya lebih besar daripada 1/4? Gunakan perumpamaan kue!",
+      "jawaban_lengkap": "Jika kita punya 2 kue yang sama besar, kue pertama dibagi 2 (setengah) dan kue kedua dibagi 4 (seperempat). Potongan kue yang dibagi 2 pasti ukurannya lebih besar daripada potongan kue yang dibagi 4. Jadi, 1/2 > 1/4."
+    },
+    {
+      "no": 3,
+      "tanya": "Ibu membeli pizza yang dipotong menjadi 8 bagian sama besar. Adik memakan 2 potong dan Kakak memakan 3 potong. Berapa bagian pizza yang sudah dimakan mereka berdua? (Tulis dalam bentuk pecahan)",
+      "jawaban_lengkap": "Diketahui: Adik = 2/8, Kakak = 3/8. Ditanya: Total. Jawab: 2/8 + 3/8 = 5/8. Jadi pizza yang dimakan adalah 5/8 bagian."
+    },
+    {
+      "no": 4,
+      "tanya": "Pak Tani memiliki sepetak sawah. 3/10 bagian ditanami jagung, 4/10 bagian ditanami padi, dan sisanya ditanami kedelai. Berapa bagian sawah yang ditanami kedelai?",
+      "jawaban_lengkap": "Sawah utuh = 10/10. Jagung + Padi = 3/10 + 4/10 = 7/10. Sisa untuk kedelai = 10/10 - 7/10 = 3/10 bagian."
+    },
+    {
+      "no": 5,
+      "tanya": "Urutkan pecahan berikut dari yang terkecil ke yang terbesar: 4/9, 1/9, 7/9, 2/9!",
+      "jawaban_lengkap": "Karena penyebutnya sama (9), kita tinggal mengurutkan pembilangnya dari yang kecil: 1, 2, 4, 7. Maka urutannya: 1/9, 2/9, 4/9, 7/9."
+    },
+    {
+      "no": 6,
+      "tanya": "Tuliskan nilai pecahan dari gambar berikut: Sebuah persegi panjang dibagi menjadi 6 kotak, 4 kotak diwarnai biru!",
+      "jawaban_lengkap": "Pembilang (kotak warna biru) = 4. Penyebut (total kotak) = 6. Maka nilai pecahannya adalah 4/6."
+    },
+    {
+      "no": 7,
+      "tanya": "Botol minum Beni berisi air 7/8 liter. Beni meminumnya hingga tersisa 2/8 liter. Berapa liter air yang diminum Beni?",
+      "jawaban_lengkap": "Awal = 7/8. Sisa = 2/8. Diminum = Awal - Sisa. Hitungan: 7/8 - 2/8 = 5/8. Jadi Beni minum 5/8 liter air."
+    },
+    {
+      "no": 8,
+      "tanya": "Bandingkan kedua pecahan ini dengan tanda > (lebih besar) atau < (lebih kecil): 1/3 ... 1/5. Jelaskan alasanmu!",
+      "jawaban_lengkap": "1/3 > 1/5 (Lebih besar). Alasan: Jika sebuah benda dibagi 3, potongannya lebih besar daripada benda yang dibagi 5. Semakin sedikit pembaginya, semakin besar potongannya."
+    },
+    {
+      "no": 9,
+      "tanya": "Siti memotong tahu menjadi 5 bagian. Ia menggoreng 5 bagian tersebut semuanya. Berapa nilai pecahan tahu yang digoreng Siti? Apa artinya?",
+      "jawaban_lengkap": "Pecahannya adalah 5/5. Artinya 5/5 sama dengan 1, yang berarti Siti menggoreng 1 tahu utuh seluruhnya."
+    },
+    {
+      "no": 10,
+      "tanya": "Buatlah satu soal cerita penjumlahan pecahan yang hasilnya 4/5!",
+      "jawaban_lengkap": "Contoh: Andi memiliki tali merah sepanjang 1/5 meter dan tali biru sepanjang 3/5 meter. Berapa panjang tali Andi jika disambung? Jawab: 1/5 + 3/5 = 4/5 meter."
+    }
+  ]
+}
